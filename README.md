@@ -35,6 +35,13 @@ The entire code needed for a working grid is below:
 }
 ```
 
+## Usage
+
+* Set row gutter to 10px: `<div class="row" style="--gutter: 10px">`
+* Set row column count to 5: `<div class="row" style="--columns: 5">`
+* Offset column by 2 column widths: `<div class="column" style="--offset: 2">`
+* Span a column by 6 column widths: `<div class="column" style="--span: 6">`
+
 ## Support
 
 Modern browsers (excluding Edge) - [http://caniuse.com/#feat=css-variables](http://caniuse.com/#feat=css-variables)
