@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Grid.</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="grid.css">
+
+    <style>
+
+    /* Demo code, not required for the grid */
+
+    body {
+        max-width: 960px;
+        margin: 60px auto;
+        font-family: 'Quicksand', sans-serif;
+        background-color: #eeeeee;
+    }
+
+    h2 {
+        font-weight: 300;
+        margin: 0 0 15px;
+    }
+
+    .row + h2 {
+        margin-top: 50px;
+    }
+
+    .row {
+        margin-bottom: 20px;
+    }
+
+    .column::before {
+        content: '';
+        display: block;
+        background-color: #34cc8e;
+        height: 30px;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    }
+
+    .column:nth-child(2n)::before {
+        background-color: #319069;
+    }
+
+    </style>
+
+</head>
+<body>
+
+    <h2>12 Column Grid</h2>
+
+    <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+    </div>
+
+    <div class="row">
+        <div class="column" style="--span: 2"></div>
+        <div class="column" style="--span: 2"></div>
+        <div class="column" style="--span: 2"></div>
+        <div class="column" style="--span: 2"></div>
+        <div class="column" style="--span: 2"></div>
+        <div class="column" style="--span: 2"></div>
+    </div>
+
+    <div class="row">
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+    </div>
+
+    <div class="row">
+        <div class="column" style="--span: 4"></div>
+        <div class="column" style="--span: 4"></div>
+        <div class="column" style="--span: 4"></div>
+    </div>
+
+    <div class="row">
+        <div class="column" style="--span: 6"></div>
+        <div class="column" style="--span: 6"></div>
+    </div>
+
+    <div class="row">
+        <div class="column" style="--span: 12"></div>
+    </div>
+
+    <div class="row">
+        <div class="column" style="--span: 3"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column" style="--span: 2"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column" style="--span: 3"></div>
+    </div>
+
+    <div class="row">
+        <div class="column" style="--span: 4"></div>
+        <div class="column" style="--span: 8"></div>
+    </div>
+
+    <div class="row">
+        <div class="column" style="--span: 6"></div>
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+    </div>
+
+    <h2>5 Column Grid</h2>
+
+    <div class="row" style="--columns: 5">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+    </div>
+
+    <div class="row" style="--columns: 5">
+        <div class="column"></div>
+        <div class="column" style="--span: 3"></div>
+        <div class="column"></div>
+    </div>
+
+    <div class="row" style="--columns: 5">
+        <div class="column" style="--span: 2"></div>
+        <div class="column"></div>
+        <div class="column" style="--span: 2"></div>
+    </div>
+
+    <h2>20 Column Grid</h2>
+
+    <div class="row" style="--columns: 20; --gutter: 5px">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+    </div>
+
+    <h2>Non-Standard Column Sizes</h2>
+
+    <div class="row" style="--columns: 5">
+        <div class="column"></div>
+        <div class="column" style="--span: 1.5"></div>
+        <div class="column" style="--span: 1.5"></div>
+        <div class="column"></div>
+    </div>
+
+    <div class="row" style="--columns: 3">
+        <div class="column" style="--span: 1.3"></div>
+        <div class="column" style="--span: .7"></div>
+        <div class="column"></div>
+    </div>
+
+    <h2>Column Offsets</h2>
+
+    <div class="row" style="--columns: 5">
+        <div class="column" style="--offset: 2"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+    </div>
+
+    <div class="row">
+        <div class="column" style="--span: 6"></div>
+        <div class="column" style="--offset: 3"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+    </div>
+
+    <div class="row" style="--columns: 5">
+        <div class="column"></div>
+        <div class="column" style="--offset: 2"></div>
+        <div class="column"></div>
+    </div>
+
+    <h2>Different Gutter Sizes</h2>
+
+    <div class="row" style="--gutter: 4px">
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+    </div>
+
+    <div class="row" style="--gutter: 30px">
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+    </div>
+
+    <div class="row" style="--gutter: 0">
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+    </div>
+
+    <div class="row" style="--gutter: 100px">
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+        <div class="column" style="--span: 3"></div>
+    </div>
+
+
+</body>
+</html>

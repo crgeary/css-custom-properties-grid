@@ -1,0 +1,17 @@
+@media screen and (min-width: 767px) {
+    .row {
+        --columns: 12;
+        --gutter: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 calc(var(--gutter) * -.5);
+    }
+    .row > .column {
+        --span: 1;
+        --offset: 0;
+        box-sizing: border-box;
+        padding: 0 calc(var(--gutter) * .5);
+        width: calc(100% / var(--columns) * var(--span));
+        margin-left: calc(100% / var(--columns) * var(--offset));
+    }
+}
