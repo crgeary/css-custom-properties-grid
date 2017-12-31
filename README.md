@@ -48,7 +48,7 @@ Modern browsers (excluding Edge) - [http://caniuse.com/#feat=css-variables](http
 
 ## Examples
 
-A full list of examples can be found on the [demo page](https://htmlpreview.github.io/?https://github.com/chrisgeary92/css-custom-properties-grid/blob/master/demo.html)
+A full list of examples can be found on the [demo page](https://css-custom-properties-grid.netlify.com/demo.html)
 
 ```html
 <!-- 12 column grid.. 1|1|1|333|666666 -->
@@ -82,4 +82,4 @@ A full list of examples can be found on the [demo page](https://htmlpreview.gith
 </div>
 ```
 
-A full list of examples can be found on the [demo page](https://htmlpreview.github.io/?https://github.com/chrisgeary92/css-custom-properties-grid/blob/master/demo.html)
+A full list of examples can be found on the [demo page](https://css-custom-properties-grid.netlify.com/demo.html)
